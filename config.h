@@ -22,52 +22,15 @@
 *                                                                             *
 * Contact information: contact@sofa-framework.org                             *
 ******************************************************************************/
-#ifndef SOFA_COMPONENT_TOPOLOGY_MANIFOLDEDGESETGEOMETRYALGORITHMS_H
-#define SOFA_COMPONENT_TOPOLOGY_MANIFOLDEDGESETGEOMETRYALGORITHMS_H
-#include <ManifoldTopologies/config.h>
+#ifndef MANIFOLDTOPOLOGIES_CONFIG_H
+#define MANIFOLDTOPOLOGIES_CONFIG_H
 
-#include <ManifoldTopologies/ManifoldTopologies.h>
+#include <sofa/helper/system/config.h>
 
-#include <SofaBaseTopology/EdgeSetGeometryAlgorithms.h>
-
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
-{
-using core::topology::BaseMeshTopology;
-typedef BaseMeshTopology::EdgeID EdgeID;
-typedef BaseMeshTopology::Edge Edge;
-typedef BaseMeshTopology::SeqEdges SeqEdges;
-typedef BaseMeshTopology::EdgesAroundVertex EdgesAroundVertex;
-
-/**
-* A class that provides geometry information on an ManifoldEdgeSet.
-*/
-template < class DataTypes >
-class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldEdgeSetGeometryAlgorithms : public EdgeSetGeometryAlgorithms<DataTypes>
-{
-public:
-    SOFA_CLASS(SOFA_TEMPLATE(ManifoldEdgeSetGeometryAlgorithms,DataTypes),SOFA_TEMPLATE(EdgeSetGeometryAlgorithms,DataTypes));
-
-    typedef typename DataTypes::VecCoord VecCoord;
-    typedef typename DataTypes::Real Real;
-    typedef typename DataTypes::Coord Coord;
-
-    ManifoldEdgeSetGeometryAlgorithms()
-        : EdgeSetGeometryAlgorithms<DataTypes>()
-    {}
-
-    virtual ~ManifoldEdgeSetGeometryAlgorithms() {}
-};
-
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
+#ifdef SOFA_BUILD_MANIFOLDTOPOLOGIES
+#  define SOFA_MANIFOLD_TOPOLOGIES_API SOFA_EXPORT_DYNAMIC_LIBRARY
+#else
+#  define SOFA_MANIFOLD_TOPOLOGIES_API SOFA_IMPORT_DYNAMIC_LIBRARY
+#endif
 
 #endif
