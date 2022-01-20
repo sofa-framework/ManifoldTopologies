@@ -1,23 +1,14 @@
+## ManifoldTopologies
 
-************************************
-*            ManifoldTopologies.txt              *
-************************************
-
-
-
-AUTHOR :
+### AUTHORS
  - Barbara André
  - Hervé Delingette
  - Erik Pernod
 
-
-
-LICENCE :
+### LICENCE :
  - ??
 
-
-
-OTHER COMMENTS :
+### OTHER COMMENTS :
 Topologies handle are: 
  - Manifold edges: close contours
  - Manifold triangulation: only one singularity

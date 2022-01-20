@@ -27,11 +27,9 @@ set(SOURCE_FILES
     initManifoldTopologies.cpp
 )
 
-set(README_FILES ManifoldTopologies.txt)
-
 find_package(SofaBase REQUIRED)
 
-add_library(${PROJECT_NAME} SHARED ${HEADER_FILES} ${SOURCE_FILES} ${README_FILES})
+add_library(${PROJECT_NAME} SHARED ${HEADER_FILES} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} SofaBaseTopology)
 
 sofa_create_package_with_targets(
