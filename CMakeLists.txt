@@ -1,30 +1,32 @@
 cmake_minimum_required(VERSION 3.12)
 project(ManifoldTopologies VERSION 0.1)
 
+set(MANIFOLDTOPOLOGIES_SRC "src/ManifoldTopologies")
+
 set(HEADER_FILES
-    ManifoldEdgeSetGeometryAlgorithms.h
-    ManifoldEdgeSetGeometryAlgorithms.inl
-    ManifoldEdgeSetTopologyContainer.h
-    ManifoldEdgeSetTopologyModifier.h
-    ManifoldTetrahedronSetTopologyContainer.h
-    ManifoldTopologyObject_double.h
-    ManifoldTopologyObject_float.h
-    ManifoldTriangleSetGeometryAlgorithms.h
-    ManifoldTriangleSetGeometryAlgorithms.inl
-    ManifoldTriangleSetTopologyContainer.h
-    ManifoldTriangleSetTopologyModifier.h
-    config.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldEdgeSetGeometryAlgorithms.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldEdgeSetGeometryAlgorithms.inl
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldEdgeSetTopologyContainer.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldEdgeSetTopologyModifier.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTetrahedronSetTopologyContainer.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTopologyObject_double.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTopologyObject_float.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTriangleSetGeometryAlgorithms.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTriangleSetGeometryAlgorithms.inl
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTriangleSetTopologyContainer.h
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTriangleSetTopologyModifier.h
+    ${MANIFOLDTOPOLOGIES_SRC}/config.h
 )
 
 set(SOURCE_FILES
-    ManifoldEdgeSetGeometryAlgorithms.cpp
-    ManifoldEdgeSetTopologyContainer.cpp
-    ManifoldEdgeSetTopologyModifier.cpp
-    ManifoldTetrahedronSetTopologyContainer.cpp
-    ManifoldTriangleSetGeometryAlgorithms.cpp
-    ManifoldTriangleSetTopologyContainer.cpp
-    ManifoldTriangleSetTopologyModifier.cpp
-    initManifoldTopologies.cpp
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldEdgeSetGeometryAlgorithms.cpp
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldEdgeSetTopologyContainer.cpp
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldEdgeSetTopologyModifier.cpp
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTetrahedronSetTopologyContainer.cpp
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTriangleSetGeometryAlgorithms.cpp
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTriangleSetTopologyContainer.cpp
+    ${MANIFOLDTOPOLOGIES_SRC}/ManifoldTriangleSetTopologyModifier.cpp
+    ${MANIFOLDTOPOLOGIES_SRC}/initManifoldTopologies.cpp
 )
 
 find_package(SofaBase REQUIRED)
@@ -36,5 +38,6 @@ sofa_create_package_with_targets(
     PACKAGE_NAME ${PROJECT_NAME}
     PACKAGE_VERSION ${PROJECT_VERSION}
     TARGETS ${PROJECT_NAME} AUTO_SET_TARGET_PROPERTIES
+    INCLUDE_SOURCE_DIR "src"
     RELOCATABLE "plugins"
     )
