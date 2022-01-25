@@ -36,9 +36,6 @@ class ManifoldTriangleSetTopologyContainer;
 
 class ManifoldTriangleSetTopologyModifier;
 
-template < class DataTypes >
-class TriangleSetGeometryAlgorithms;
-
 /**
  * A class that performs topology algorithms on an ManifoldTriangleSet.
  */
