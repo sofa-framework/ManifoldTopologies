@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.12)
 project(ManifoldTopologies VERSION 0.1)
 
+include(cmake/environment.cmake)
+
 sofa_find_package(Sofa.Component.Topology.Container REQUIRED)
 
 set(MANIFOLDTOPOLOGIES_SRC "src/ManifoldTopologies")
