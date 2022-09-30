@@ -24,13 +24,7 @@
 #include <ManifoldTopologies/ManifoldEdgeSetTopologyContainer.h>
 #include <sofa/core/ObjectFactory.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 using namespace sofa::defaulttype;
 int ManifoldEdgeSetTopologyModifierClass = core::RegisterObject("ManifoldEdge set topology modifier")
@@ -159,9 +153,4 @@ void ManifoldEdgeSetTopologyModifier::splitEdges( sofa::type::vector<Index> &ind
     m_container->checkTopology();
 }
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
-
+} // namespace sofa::component::topology::container::dynamic

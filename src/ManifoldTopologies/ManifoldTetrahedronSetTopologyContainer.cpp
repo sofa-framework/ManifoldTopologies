@@ -23,13 +23,7 @@
 #include <ManifoldTopologies/ManifoldTetrahedronSetTopologyContainer.h>
 #include <sofa/core/ObjectFactory.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 
 using namespace std;
@@ -462,9 +456,5 @@ int ManifoldTetrahedronSetTopologyContainer::getTriangleTetrahedronOrientation (
 
 //no warnings:
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
+} // namespace sofa::component::topology::container::dynamic
 

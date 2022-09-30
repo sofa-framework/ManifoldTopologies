@@ -19,19 +19,12 @@
 *                                                                             *
 * Contact information: contact@sofa-framework.org                             *
 ******************************************************************************/
-#ifndef SOFA_MANIFOLD_TOPOLOGY_EDGESETTOPOLOGYMODIFIER_H
-#define SOFA_MANIFOLD_TOPOLOGY_EDGESETTOPOLOGYMODIFIER_H
+#pragma once
 
 #include <ManifoldTopologies/config.h>
-#include <SofaBaseTopology/EdgeSetTopologyModifier.h>
+#include <sofa/component/topology/container/dynamic/EdgeSetTopologyModifier.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 class ManifoldEdgeSetTopologyContainer;
 
@@ -143,10 +136,4 @@ private:
     ManifoldEdgeSetTopologyContainer* 	m_container;
 };
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
-
-#endif // SOFA_MANIFOLD_TOPOLOGY_EDGESETTOPOLOGYMODIFIER_H
+} // namespace sofa::component::topology::container::dynamic

@@ -24,13 +24,7 @@
 #include <ManifoldTopologies/ManifoldEdgeSetGeometryAlgorithms.inl>
 #include <sofa/core/ObjectFactory.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 using namespace sofa::defaulttype;
 int ManifoldEdgeSetGeometryAlgorithmsClass = core::RegisterObject("ManifoldEdge set geometry algorithms")
@@ -48,9 +42,5 @@ template class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldEdgeSetGeometryAlgorithms<Ri
 template class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldEdgeSetGeometryAlgorithms<Rigid2Types>;
 
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
+} // namespace sofa::component::topology::container::dynamic
 

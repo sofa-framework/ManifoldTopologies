@@ -19,19 +19,12 @@
 *                                                                             *
 * Contact information: contact@sofa-framework.org                             *
 ******************************************************************************/
-#ifndef SOFA_MANIFOLD_TOPOLOGY_TETRAHEDRONSETTOPOLOGYCONTAINER_H
-#define SOFA_MANIFOLD_TOPOLOGY_TETRAHEDRONSETTOPOLOGYCONTAINER_H
+#pragma once
 
 #include <ManifoldTopologies/config.h>
-#include <SofaBaseTopology/TetrahedronSetTopologyContainer.h>
+#include <sofa/component/topology/container/dynamic/TetrahedronSetTopologyContainer.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 class TetrahedronSetTopologyModifier; //has to be change to Manifold one
 
@@ -144,10 +137,4 @@ protected:
 
 };
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
-
-#endif // SOFA_MANIFOLD_TOPOLOGY_TETRAHEDRONSETTOPOLOGYCONTAINER_H
+} // namespace sofa::component::topology::container::dynamic

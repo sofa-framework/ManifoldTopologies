@@ -28,13 +28,7 @@
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/connected_components.hpp>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 
 using namespace std;
@@ -338,15 +332,10 @@ const sofa::type::vector< Index > &ManifoldEdgeSetTopologyContainer::getComponen
 }
 
 
-const sofa::type::vector< sofa::component::topology::ManifoldEdgeSetTopologyContainer::ConnectedComponent > &ManifoldEdgeSetTopologyContainer::getConnectedComponentArray() const
+const sofa::type::vector< sofa::component::topology::container::dynamic::ManifoldEdgeSetTopologyContainer::ConnectedComponent > &ManifoldEdgeSetTopologyContainer::getConnectedComponentArray() const
 {
     return m_ConnectedComponentArray;
 }
 
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
-
+} // namespace sofa::component::topology::container::dynamic

@@ -22,13 +22,9 @@
 #pragma once
 
 #include <ManifoldTopologies/config.h>
-#include <SofaBaseTopology/TriangleSetGeometryAlgorithms.h>
+#include <sofa/component/topology/container/dynamic/TriangleSetGeometryAlgorithms.h>
 
-namespace sofa
-{
-namespace component
-{
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 
 
@@ -133,8 +129,4 @@ extern template class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldTriangleSetGeometryAl
 extern template class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldTriangleSetGeometryAlgorithms<sofa::defaulttype::Vec2Types>;
 #endif
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
+} // namespace sofa::component::topology::container::dynamic

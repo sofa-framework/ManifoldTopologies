@@ -24,15 +24,9 @@
 #include <ManifoldTopologies/ManifoldTriangleSetGeometryAlgorithms.h>
 #include <ManifoldTopologies/ManifoldTriangleSetTopologyContainer.h>
 #include <ManifoldTopologies/ManifoldTriangleSetTopologyModifier.h>
-#include <SofaBaseTopology/TriangleSetGeometryAlgorithms.h>
+#include <sofa/component/topology/container/dynamic/TriangleSetGeometryAlgorithms.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 using namespace sofa::defaulttype;
 using namespace sofa::core::behavior;
@@ -424,8 +418,4 @@ bool ManifoldTriangleSetGeometryAlgorithms< DataTypes >::InciseAlongEdgeList (co
 }
 
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
+} // namespace sofa::component::topology::container::dynamic

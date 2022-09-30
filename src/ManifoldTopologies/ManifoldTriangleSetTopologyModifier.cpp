@@ -24,13 +24,7 @@
 #include <ManifoldTopologies/ManifoldTriangleSetTopologyContainer.h> 
 #include <sofa/core/ObjectFactory.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 int ManifoldTriangleSetTopologyModifierClass = core::RegisterObject("Triangle set topology manifold modifier")
         .add< ManifoldTriangleSetTopologyModifier >()
@@ -979,9 +973,5 @@ void ManifoldTriangleSetTopologyModifier::reorderingTopologyOnROI (const sofa::t
 
 
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
+} // namespace sofa::component::topology::container::dynamic
 

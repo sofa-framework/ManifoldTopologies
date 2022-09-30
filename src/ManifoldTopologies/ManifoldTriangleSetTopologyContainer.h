@@ -19,19 +19,12 @@
 *                                                                             *
 * Contact information: contact@sofa-framework.org                             *
 ******************************************************************************/
-#ifndef SOFA_MANIFOLD_TOPOLOGY_TRIANGLESETTOPOLOGYCONTAINER_H
-#define SOFA_MANIFOLD_TOPOLOGY_TRIANGLESETTOPOLOGYCONTAINER_H
+#pragma once
 
 #include <ManifoldTopologies/config.h>
-#include <SofaBaseTopology/TriangleSetTopologyContainer.h>
+#include <sofa/component/topology/container/dynamic/TriangleSetTopologyContainer.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 
 using core::topology::BaseMeshTopology;
@@ -202,10 +195,4 @@ private:
 
 };
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
-
-#endif // SOFA_MANIFOLD_TOPOLOGY_TRIANGLESETTOPOLOGYCONTAINER_H
+} // namespace sofa::component::topology::container::dynamic

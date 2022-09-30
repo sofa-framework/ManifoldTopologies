@@ -24,13 +24,7 @@
 #include <ManifoldTopologies/ManifoldTriangleSetGeometryAlgorithms.inl>
 #include <sofa/core/ObjectFactory.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 
 using namespace sofa::defaulttype;
@@ -42,9 +36,5 @@ int ManifoldTriangleSetGeometryAlgorithmsClass = core::RegisterObject("ManifoldT
 template class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldTriangleSetGeometryAlgorithms<Vec3Types>;
 template class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldTriangleSetGeometryAlgorithms<Vec2Types>;
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
+} // namespace sofa::component::topology::container::dynamic
 

@@ -19,25 +19,13 @@
 *                                                                             *
 * Contact information: contact@sofa-framework.org                             *
 ******************************************************************************/
-#ifndef SOFA_MANIFOLD_TOPOLOGY_EDGESETGEOMETRYALGORITHMS_INL
-#define SOFA_MANIFOLD_TOPOLOGY_EDGESETGEOMETRYALGORITHMS_INL
+#pragma once
 
 #include <ManifoldTopologies/ManifoldEdgeSetGeometryAlgorithms.h>
 #include <sofa/core/visual/VisualParams.h>
 
-namespace sofa
+namespace sofa::component::topology::container::dynamic
 {
 
-namespace component
-{
+} // namespace sofa::component::topology::container::dynamic
 
-namespace topology
-{
-
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
-
-#endif // SOFA_MANIFOLD_TOPOLOGY_EDGESETGEOMETRYALGORITHMS_INL
