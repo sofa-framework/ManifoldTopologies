@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.12)
 project(ManifoldTopologies VERSION 0.1)
 
+find_package(Sofa.Component.Topology.Container REQUIRED)
+
 set(MANIFOLDTOPOLOGIES_SRC "src/ManifoldTopologies")
 
 set(HEADER_FILES
@@ -29,10 +31,8 @@ set(SOURCE_FILES
     ${MANIFOLDTOPOLOGIES_SRC}/initManifoldTopologies.cpp
 )
 
-find_package(SofaBase REQUIRED)
-
 add_library(${PROJECT_NAME} SHARED ${HEADER_FILES} ${SOURCE_FILES})
-target_link_libraries(${PROJECT_NAME} SofaBaseTopology)
+target_link_libraries(${PROJECT_NAME} Sofa.Component.Topology.Container)
 
 sofa_create_package_with_targets(
     PACKAGE_NAME ${PROJECT_NAME}
@@ -41,3 +41,7 @@ sofa_create_package_with_targets(
     INCLUDE_SOURCE_DIR "src"
     RELOCATABLE "plugins"
     )
+
+# Organize projects into folders
+SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
+SET_PROPERTY(TARGET ${PROJECT_NAME} PROPERTY FOLDER "plugins")
