@@ -19,19 +19,12 @@
 *                                                                             *
 * Contact information: contact@sofa-framework.org                             *
 ******************************************************************************/
-#ifndef SOFA_MANIFOLD_TOPOLOGY_EDGESETGEOMETRYALGORITHMS_H
-#define SOFA_MANIFOLD_TOPOLOGY_EDGESETGEOMETRYALGORITHMS_H
+#pragma once
 
 #include <ManifoldTopologies/config.h>
-#include <SofaBaseTopology/EdgeSetGeometryAlgorithms.h>
+#include <sofa/component/topology/container/dynamic/EdgeSetGeometryAlgorithms.h>
 
-namespace sofa
-{
-
-namespace component
-{
-
-namespace topology
+namespace sofa::component::topology::container::dynamic
 {
 using core::topology::BaseMeshTopology;
 typedef BaseMeshTopology::EdgeID EdgeID;
@@ -67,10 +60,4 @@ extern template class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldEdgeSetGeometryAlgori
 extern template class SOFA_MANIFOLD_TOPOLOGIES_API ManifoldEdgeSetGeometryAlgorithms<sofa::defaulttype::Rigid2Types>;
 #endif
 
-} // namespace topology
-
-} // namespace component
-
-} // namespace sofa
-
-#endif // SOFA_MANIFOLD_TOPOLOGY_EDGESETGEOMETRYALGORITHMS_H
+} // namespace sofa::component::topology::container::dynamic
