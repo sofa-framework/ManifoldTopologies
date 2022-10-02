@@ -19,32 +19,32 @@
         <RequiredPlugin name="Sofa.Component.Topology.Container.Dynamic"/> <!-- Needed to use components [TriangleSetGeometryAlgorithms] -->  
         <RequiredPlugin name="Sofa.Component.Visual"/> <!-- Needed to use components [VisualStyle] -->  
         <RequiredPlugin name="Sofa.GL.Component.Rendering3D"/> <!-- Needed to use components [OglModel] -->  
-    <Node/>
+    </Node>
     <VisualStyle displayFlags="showBehaviorModels hideCollisionModels hideMappings hideForceFields"/>
-	<DefaultPipeline verbose="0" />
-	<BruteForceBroadPhase/>
+    <DefaultPipeline verbose="0" />
+    <BruteForceBroadPhase/>
     <BVHNarrowPhase/>
-	<DefaultContactManager response="PenalityContactForceField" />
-	<MinProximityIntersection name="Proximity" alarmDistance="0.8" contactDistance="0.5" />
-	<DefaultCollisionGroupManager />
-	<Node name="SquareGravity">
-		<CGImplicit iterations="40" tolerance="1e-6" threshold="1e-10"/>
-                <MeshOBJLoader name="loader" filename="mesh/square1.obj" />
-		<MechanicalObject src="@loader" scale="10" />
-		
-	<ManifoldTriangleSetTopologyContainer src="@loader"  name="Container" fileTopology=""/>
-  	<ManifoldTriangleSetTopologyModifier   name="Modifier" />
-  	<TriangleSetGeometryAlgorithms name="GeomAlgo"   template="Vec3d" />
+    <DefaultContactManager response="PenalityContactForceField" />
+    <MinProximityIntersection name="Proximity" alarmDistance="0.8" contactDistance="0.5" />
+    <DefaultCollisionGroupManager />
+    <Node name="SquareGravity">
+        <CGImplicit iterations="40" tolerance="1e-6" threshold="1e-10"/>
+        <MeshOBJLoader name="loader" filename="mesh/square1.obj" />
+        <MechanicalObject src="@loader" scale="10" />
 
-		<DiagonalMass massDensity="0.15" />
-		<FixedConstraint indices="2 3"/>
-		<TriangularFEMForceField name="FEM" youngModulus="60" poissonRatio="0.3" method="large" />  
-		<TriangularBendingSprings name="FEM-Bend" stiffness="300" damping="1.0"/>
-		<TriangleCollisionModel/>
-		<Node >
-			<OglModel name="Visual" color="red"/>
-			<IdentityMapping input="@.." output="@Visual"/>
-		</Node>
-	</Node>
+        <ManifoldTriangleSetTopologyContainer src="@loader"  name="Container" fileTopology=""/>
+        <ManifoldTriangleSetTopologyModifier   name="Modifier" />
+        <TriangleSetGeometryAlgorithms name="GeomAlgo"   template="Vec3d" />
+
+        <DiagonalMass massDensity="0.15" />
+        <FixedConstraint indices="2 3"/>
+        <TriangularFEMForceField name="FEM" youngModulus="60" poissonRatio="0.3" method="large" />  
+        <TriangularBendingSprings name="FEM-Bend" stiffness="300" damping="1.0"/>
+        <TriangleCollisionModel/>
+        <Node >
+            <OglModel name="Visual" color="red"/>
+            <IdentityMapping input="@.." output="@Visual"/>
+        </Node>
+    </Node>
 </Node>
 
