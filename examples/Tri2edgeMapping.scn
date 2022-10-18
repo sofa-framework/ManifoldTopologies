@@ -24,7 +24,6 @@
     <BVHNarrowPhase/>
     <DefaultContactManager name="default1" response="PenalityContactForceField"/>
     <MinProximityIntersection name="Proximity" alarmDistance="0.8" contactDistance="0.5"/>
-    <DefaultCollisionGroupManager name="default2"/>
     <Node name="SquareGravity" gravity="0 -9.81 0"  >
         <CGImplicitSolver name="default3" iterations="40" tolerance="1e-06" threshold="1e-10"/>
         <MeshGmshLoader name="loader" filename="mesh/square3.msh" createSubelements="true"/>
