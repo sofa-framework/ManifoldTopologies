@@ -32,7 +32,7 @@
         <ManifoldTriangleSetTopologyContainer src="@loader" name="Container"/>
         <ManifoldTriangleSetTopologyModifier name="Modifier"/>
         <TriangleSetGeometryAlgorithms template="Vec3d" name="GeomAlgo"/>
-        <DiagonalMass template="Vec3d" name="default146" massDensity="0.15"/>
+        <DiagonalMass template="Vec3d,Vec3d" name="default146" massDensity="0.15"/>
         <FixedConstraint template="Vec3d" name="default147" indices="0 1"/>
         <TriangularFEMForceField template="Vec3d" name="FEM" method="large" poissonRatio="0.3" youngModulus="60"/>
         <TriangularBendingSprings template="Vec3d" name="FEM-Bend" stiffness="300" damping="1"/>
@@ -43,8 +43,8 @@
             <ManifoldEdgeSetGeometryAlgorithms template="Vec3d" name="TopoGeo"/>
             <Triangle2EdgeTopologicalMapping name="Mapping" input="@../Container" output="@Container"/>
             <Node name="Visu" gravity="0 -9.81 0"  >
-                <OglModel template="ExtVec3f" name="Visual" position="@../../mechanical.position" triangles="@../../loader.triangles"  material="Default Diffuse 1 0 0 1 1 Ambient 1 0 0 0.2 1 Specular 0 0 0 1 1 Emissive 0 0 0 1 1 Shininess 0 45"/>
-                <IdentityMapping template="Vec3d,ExtVec3f" name="default17" input="@../../mechanical" output="@Visual"/>
+                <OglModel template="Vec3d" name="Visual" position="@../../mechanical.position" triangles="@../../loader.triangles"  material="Default Diffuse 1 0 0 1 1 Ambient 1 0 0 0.2 1 Specular 0 0 0 1 1 Emissive 0 0 0 1 1 Shininess 0 45"/>
+                <IdentityMapping template="Vec3d,Vec3d" name="default17" input="@../../mechanical" output="@Visual"/>
             </Node>
             <MeshSpringForceField template="Vec3d" name="default0" stiffness="100" damping="1" linesStiffness="100" linesDamping="1" trianglesStiffness="100" trianglesDamping="1" quadsStiffness="100" quadsDamping="1" tetrasStiffness="100" tetrasDamping="1" cubesStiffness="100" cubesDamping="1"/>
         </Node>
