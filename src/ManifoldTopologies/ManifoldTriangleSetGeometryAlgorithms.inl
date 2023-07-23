@@ -299,7 +299,7 @@ void ManifoldTriangleSetGeometryAlgorithms< DataTypes >::swapRemeshing(sofa::typ
 
 template<class DataTypes>
 int ManifoldTriangleSetGeometryAlgorithms< DataTypes >::SplitAlongPath(Index pa, Coord& a, Index pb, Coord& b,
-        sofa::type::vector< sofa::core::topology::TopologyElementType>& topoPath_list,
+        sofa::type::vector< sofa::geometry::ElementType>& topoPath_list,
         sofa::type::vector<Index>& indices_list,
         sofa::type::vector< sofa::type::Vec<3, double> >& coords_list,
         sofa::type::vector<EdgeID>& new_edges, double epsilonSnapPath, double epsilonSnapBorder)
