@@ -52,7 +52,7 @@ void initExternalModule()
 
 const char* getModuleName()
 {
-    return "Manifold Topologies Plugin";
+    return "ManifoldTopologies";
 }
 
 const char* getModuleVersion()
