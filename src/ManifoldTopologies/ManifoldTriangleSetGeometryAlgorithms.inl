@@ -153,7 +153,7 @@ bool ManifoldTriangleSetGeometryAlgorithms< DataTypes >::edgeSwap(const EdgeID& 
     Triangle vertexTriangle2 = m_container->getTriangle (trianglesIndex2remove[1]);
 
     Triangle newTri;
-    const typename DataTypes::VecCoord& coords = m_geometryAlgorithms->getDOF()->read(core::ConstVecCoordId::position())->getValue();
+    const typename DataTypes::VecCoord& coords = m_geometryAlgorithms->getDOF()->read(core::vec_id::read_access::position)->getValue();
     typename DataTypes::Coord tri1[3], tri2[3];
 
     newTri[0] = vertexTriangle1[ edgeInTri1 ];
