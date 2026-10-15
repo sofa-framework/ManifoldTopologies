@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macos-14, windows-2022]
+        os: [ubuntu-24.04, macos-15, windows-latest]
         sofa_branch: [master]
 
     steps:
@@ -26,8 +26,8 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
         with:
-          path: ${{ env.WORKSPACE_SRC_PATH }}        
-      
+          path: ${{ env.WORKSPACE_SRC_PATH }}
+
       - name: Build and install
         shell: bash
         run: |
